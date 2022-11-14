@@ -1,23 +1,23 @@
-from .ocorrencias import *
+from .aeronaves import *
 
-def ocorrencia():
+def aeronaves():
     i = 0
     while (i == 0):
         print("---------------------------------------------------------------------------------------")
         print("\n Qual tipo de ocorrencia gostaria de ver? \n")
-        print("1 - Classificação")
-        print("2 - Status das Ocorrencia")
-        print("3 - Pesquisa por Cidade")
-        print("4 - Sair de Ocorrencias")
+        print("1 - Tipo de Aeronave")
+        print("2 - Tipo de Motor")
+        print("3 - Segmento")
+        print("4 - Sair de Aeronaves")
         opcao = int(input("\n Digite uma das opções: "))
         if (opcao > 4) | (opcao < 1):
             print("\n  OPÇÃO INVALIDA - TENTE NOVAMENTE \n")
         else:
             if (opcao == 1):
-                classificacao()
+                aeronaveTipo()
             if (opcao == 2):
-                status()
+                motorTipo()
             if (opcao == 3):
-                pesquisaCidade()
+                segmento()
             if (opcao == 4):
                 i = 1

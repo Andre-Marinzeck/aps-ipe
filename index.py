@@ -1,8 +1,13 @@
 from ocorrencia.ocorrenciaView import *
+from ocorrenciaTipo.ocorrenciasTipoView import *
+from aeronave.aeronaveView import *
+from fatorContribuinte.fatorView import *
+from recomendacoes.recomendacoesView import *
 
 i = 0
 
 while (i == 0):
+    print("---------------------------------------------------------------------------------------")
     print("\n Escolha uma das opções abaixo \n")
     print("1 - Ocorrencia")
     print("2 - Tipo de Ocorrencia")
@@ -17,12 +22,12 @@ while (i == 0):
         if (opcao == 1):
             ocorrencia()
         if (opcao == 2):
-            ocorrencia()
+            TipoOcorrencia()
         if (opcao == 3):
-            ocorrencia()
+            aeronaves()
         if (opcao == 4):
-            ocorrencia()
+            fatorContribuinte()
         if (opcao == 5):
-            ocorrencia()
+            recomendacoes()
         if (opcao == 6):
             i = 1
