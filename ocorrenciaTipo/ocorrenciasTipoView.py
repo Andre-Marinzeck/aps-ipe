@@ -3,8 +3,8 @@ from .ocorrenciasTipo import *
 def TipoOcorrencia():
     i = 0
     while (i == 0):
-        print("---------------------------------------------------------------------------------------")
-        print("\n Qual tipo de ocorrencia gostaria de ver? \n")
+        print("--------------------------------------------------------------------------------------------")
+        print("\n Qual tipo de ocorrência gostaria de ver? \n")
         print("1 - ESTOURO DE PNEU")
         print("2 - EXCURSÃO DE PISTA")
         print("3 - DESCOMPRESSÃO NÃO INTENCIONAL / EXPLOSIVA")
@@ -18,7 +18,7 @@ def TipoOcorrencia():
         print("11 - CONTATO ANORMAL COM A PISTA")
         print("12 - TRÁFEGO AÉREO")
         print("13 - COLISÃO COM AVE")
-        print("14 - Sair de Ocorrencias")
+        print("14 - Sair de Ocorrências")
         opcao = int(input("\n Digite uma das opções: "))
         if (opcao > 14) | (opcao < 1):
             print("\n  OPÇÃO INVALIDA - TENTE NOVAMENTE \n")

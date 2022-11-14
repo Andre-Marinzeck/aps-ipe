@@ -8,6 +8,7 @@ dados = pd.read_csv(url, sep=';', encoding='latin-1')
 
 def classificacao():
     while (True):
+        print("--------------------------------------------------------------------------------------------")
         print("1 - Acidente")
         print("2 - Incidente")
         print("3 - Incidente Grave")
@@ -30,10 +31,11 @@ def classificacao():
             ocorrencia = dados[classificacao].loc[:, ['codigo_ocorrencia', 'ocorrencia_classificacao',
                                                     'ocorrencia_cidade', 'ocorrencia_uf']]
             porcentagem = (len(ocorrencia) * 100) / len(dados)
+            print("----------------------------------------Dados Abaixo----------------------------------------")
+            print(f"\nOcorrência de {status}\n")
             print(ocorrencia)
-            print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} são {status} ")
+            print(f"\nDas {len(dados)} ocorrências, {len(ocorrencia)} são {status} ")
             print(f"O que equivale à {round(porcentagem,2)}%")
-            print("---------------------------------------------------------------------------------------")
 
 
 
@@ -41,6 +43,7 @@ def classificacao():
 
 def status():
     while (True):
+        print("--------------------------------------------------------------------------------------------")
         print("1 - Ativa")
         print("2 - Finalizada")
         print("3 - Sair de Status")
@@ -59,23 +62,25 @@ def status():
         ocorrencia = dados[classificacao].loc[:, ['codigo_ocorrencia', 'ocorrencia_classificacao',
                                                   'ocorrencia_cidade', 'ocorrencia_uf', 'investigacao_status']]
         porcentagem = (len(ocorrencia) * 100) / len(dados)
+        print("----------------------------------------Dados Abaixo----------------------------------------")
+        print(f"\nOcorrência {status}\n")
         print(ocorrencia)
-        print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} estão {status} ")
+        print(f"\nDas {len(dados)} ocorrências, {len(ocorrencia)} estão {status} ")
         print(f"O que equivale à {round(porcentagem,2)}%")
-        print("---------------------------------------------------------------------------------------")
 
 
 
 # Pesquisa por cidades
 
 def pesquisaCidade():
+    print("--------------------------------------------------------------------------------------------")
     cidade = input("Digite a cidade que gostaria de ver: ").upper()
     classificacao = dados.ocorrencia_cidade == cidade
     ocorrencia = dados[classificacao].loc[:, ['codigo_ocorrencia', 'ocorrencia_classificacao',
                                               'ocorrencia_cidade', 'ocorrencia_uf']]
     porcentagem = (len(ocorrencia) * 100) / len(dados)
+    print("----------------------------------------Dados Abaixo----------------------------------------")
+    print(f"\nOcorrência na cidade: {cidade}\n")
     print(ocorrencia)
-    print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} são em {cidade}")
+    print(f"\nDas {len(dados)} ocorrências, {len(ocorrencia)} são em {cidade}")
     print(f"O que equivale à {round(porcentagem,2)}%")
-    print("---------------------------------------------------------------------------------------")
-

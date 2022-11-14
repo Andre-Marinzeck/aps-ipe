@@ -3,8 +3,8 @@ from .aeronaves import *
 def aeronaves():
     i = 0
     while (i == 0):
-        print("---------------------------------------------------------------------------------------")
-        print("\n Qual tipo de ocorrencia gostaria de ver? \n")
+        print("--------------------------------------------------------------------------------------------")
+        print("\n Escolha uma das opções abaixo \n")
         print("1 - Tipo de Aeronave")
         print("2 - Tipo de Motor")
         print("3 - Segmento")

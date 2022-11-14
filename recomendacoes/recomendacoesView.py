@@ -3,7 +3,7 @@ from .recomendacoes import *
 def recomendacoes():
     i = 0
     while (i == 0):
-        print("---------------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------------------")
         print("\n Qual tipo de recomendações gostaria de ver? \n")
         print("1 - IMPLEMENTADA")
         print("2 - NÃO IMPLEMENTADA")

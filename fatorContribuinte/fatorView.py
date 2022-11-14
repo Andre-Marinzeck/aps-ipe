@@ -3,8 +3,8 @@ from .fator import *
 def fatorContribuinte():
     i = 0
     while (i == 0):
-        print("---------------------------------------------------------------------------------------")
-        print("\n Qual tipo de ocorrencia gostaria de ver? \n")
+        print("--------------------------------------------------------------------------------------------")
+        print("\n Qual tipo de fator gostaria de ver? \n")
         print("1 - ATITUDE")
         print("2 - JULGAMENTO DE PILOTAGEM")
         print("3 - PLANEJAMENTO DE VOO")

@@ -5,7 +5,7 @@ dados = pd.read_csv(url, sep=';', encoding='UTF-8')
 
 def aeronaveTipo():
     while (True):
-        print("---------------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------------------")
         print("\n Qual tipo de aeronave gostaria de ver? \n")
         print("1 - Avião")
         print("2 - Helicóptero")
@@ -29,14 +29,16 @@ def aeronaveTipo():
         ocorrencia = dados[tipo].loc[:, ['aeronave_matricula', 'aeronave_tipo_veiculo',
                                                     'aeronave_fabricante', 'aeronave_nivel_dano']]
         porcentagem = (len(ocorrencia) * 100) / len(dados)
+        print("----------------------------------------Dados Abaixo----------------------------------------")
         print(ocorrencia)
-        print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} é de {status}")
+        print(f"\nDas {len(dados)} aeronaves, {len(ocorrencia)} é de {status}")
         print(f"O que equivale à {round(porcentagem,2)}%")
+        
 
 
 def motorTipo():
     while (True):
-        print("---------------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------------------")
         print("\n Qual tipo de motor gostaria de ver? \n")
         print("1 - PISTÃO")
         print("2 - JATO")
@@ -64,14 +66,15 @@ def motorTipo():
         ocorrencia = dados[tipo].loc[:, ['aeronave_matricula', 'aeronave_motor_tipo',
                                                     'aeronave_fabricante', 'aeronave_nivel_dano']]
         porcentagem = (len(ocorrencia) * 100) / len(dados)
+        print("----------------------------------------Dados Abaixo----------------------------------------")
         print(ocorrencia)
-        print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} é do tipo {status}")
+        print(f"\nDas {len(dados)} aeronaves, {len(ocorrencia)} é do tipo {status}")
         print(f"O que equivale à {round(porcentagem,2)}%")
 
 
 def segmento():
     while (True):
-        print("---------------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------------------")
         print("\n Qual tipo de segmento gostaria de ver? \n")
         print("1 - TÁXI AÉREO")
         print("2 - INSTRUÇÃO")
@@ -115,6 +118,7 @@ def segmento():
         ocorrencia = dados[tipo].loc[:, ['aeronave_matricula', 'aeronave_registro_segmento',
                                                     'aeronave_fabricante', 'aeronave_nivel_dano']]
         porcentagem = (len(ocorrencia) * 100) / len(dados)
+        print("----------------------------------------Dados Abaixo----------------------------------------")
         print(ocorrencia)
-        print(f"\nDas {len(dados)} ocorrencias, {len(ocorrencia)} é do tipo {status}")
+        print(f"\nDas {len(dados)} aeronaves, {len(ocorrencia)} é do tipo {status}")
         print(f"O que equivale à {round(porcentagem,2)}%")

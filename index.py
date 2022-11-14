@@ -1,22 +1,23 @@
-from ocorrencia.ocorrenciaView import *
-from ocorrenciaTipo.ocorrenciasTipoView import *
-from aeronave.aeronaveView import *
-from fatorContribuinte.fatorView import *
-from recomendacoes.recomendacoesView import *
+from analise.analiseView import analises
+from ocorrencia.ocorrenciaView import ocorrencia
+from ocorrenciaTipo.ocorrenciasTipoView import TipoOcorrencia
+from aeronave.aeronaveView import aeronaves
+from fatorContribuinte.fatorView import fatorContribuinte
+from recomendacoes.recomendacoesView import recomendacoes
 
 i = 0
-
 while (i == 0):
-    print("---------------------------------------------------------------------------------------")
+    print("--------------------------------------------------------------------------------------------")
     print("\n Escolha uma das opções abaixo \n")
-    print("1 - Ocorrencia")
-    print("2 - Tipo de Ocorrencia")
+    print("1 - Ocorrência")
+    print("2 - Tipo de Ocorrência")
     print("3 - Tabela de Aeronave")
     print("4 - Fator Contribuinte")
     print("5 - Recomendações")
-    print("6 - Sair")
+    print("6 - Análises Críticas")
+    print("7 - Sair")
     opcao = int(input("\n Digite uma da opções: "))
-    if (opcao > 6) | (opcao < 1):
+    if (opcao > 7) | (opcao < 1):
         print("\n  OPÇÃO INVALIDA - TENTE NOVAMENTE \n")
     else:
         if (opcao == 1):
@@ -30,4 +31,6 @@ while (i == 0):
         if (opcao == 5):
             recomendacoes()
         if (opcao == 6):
+            analises()
+        if (opcao == 7):
             i = 1
